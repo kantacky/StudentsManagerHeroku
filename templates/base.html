@@ -27,20 +27,18 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div id="site-title">
-                <a href="/">
-                    <h4>StudentsManager</h4>
-                </a>
+        <div id="headerContainer">
+            <div id="siteTitle">
+                <a href="/"><h5>StudentsManager</h5></a>
             </div>
-            <div id="nav-toggle">
+            <div id="navToggle">
                 <div>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <div id="global-nav">
+            <div id="globalNav">
                 <nav>
                     <ul>
                         {% if user.is_authenticated %}

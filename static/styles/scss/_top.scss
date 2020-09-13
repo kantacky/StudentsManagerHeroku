@@ -1,9 +1,8 @@
 @charset "UTF-8";
 .topContent {
-    margin-top: 24px;
     .topTitle {
-        margin-bottom: 8px;
-        padding: 12px 8px;
+        margin: 4px 0px;
+        padding: 8px;
         border-bottom: solid 1px #000000;
     }
     .subTitle {
@@ -44,7 +43,7 @@
 }
 
 #messages {
-    margin: 16px 0px -12px 0px;
+    margin: 16px 0px;
     .message {
         text-align: center;
         p {

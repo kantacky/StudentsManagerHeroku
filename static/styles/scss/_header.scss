@@ -19,24 +19,16 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-    .header-container {
+    #headerContainer {
         max-width: 1200px;
         margin: 8px auto;
         display: block;
-        #site-title {
+        #siteTitle {
             margin: 4px 8px;
             display: block;
             float: left;
-            h5 {
-                display: inline-block;
-                small {
-                    margin: 0px 8px;
-                    padding: 2px 4px;
-                    font-size: 12px;
-                }
-            }
         }
-        #nav-toggle {
+        #navToggle {
             display: none;
         }
         ul {
@@ -55,21 +47,12 @@ header {
 }
 
 @media screen and (max-width: 1023px) {
-    #site-title {
+    #siteTitle {
         position: absolute;
         top: 12px;
         left: 24px;
-        h5 {
-            display: inline-block;
-            font-size: 18px;
-            small {
-                margin: 0px 4px;
-                padding: 2px 4px;
-                font-size: 12px;
-            }
-        }
     }
-    #nav-toggle {
+    #navToggle {
         position: fixed;
         top: 12px;
         right: 24px;
@@ -100,7 +83,7 @@ header {
         }
     }
     .open {
-        #nav-toggle span {
+        #navToggle span {
             background: #ffffff;
             &:nth-child(1) {
                 top: 12px;
@@ -117,7 +100,7 @@ header {
             }
         }
     }
-    #global-nav {
+    #globalNav {
         background: #000000;
         color: #ffffff;
         position: fixed;
@@ -181,21 +164,15 @@ header {
     }
     .open {
         overflow: hidden;
-        #global-nav {
+        #globalNav {
             visibility: visible;
             opacity: 1;
         }
-        #global-nav li {
+        #globalNav li {
             opacity: 1;
             transform: translateX(0);
             transition: transform 1s ease, opacity .9s ease;
         }
-    }
-}
-
-@media screen and (max-width: 359px) {
-    #site-title {
-        left: 16px;
     }
 }
 
@@ -206,15 +183,8 @@ header {
         color: #000000;
     }
     @media screen and (min-width: 1024px) {
-        .header-container {
-            #site-title h4 small {
-                margin: 0px 8px;
-                padding: 2px 4px;
-                font-size: 12px;
-                border: solid 0.5px #ffffff;
-                border-radius: 4px;
-            }
-            #nav-toggle {
+        #headerContainer {
+            #navToggle {
                 display: none;
             }
             ul {
@@ -235,11 +205,7 @@ header {
         }
     }
     @media screen and (max-width: 1023px) {
-        #site-title h4 small {
-            border: solid 0.5px #ffffff;
-            border-radius: 4px;
-        }
-        #nav-toggle {
+        #navToggle {
             position: fixed;
             top: 12px;
             right: 28px;
@@ -270,7 +236,7 @@ header {
             }
         }
         .open {
-            #nav-toggle span {
+            #navToggle span {
                 background: #ffffff;
                 &:nth-child(1) {
                     top: 12px;
@@ -287,7 +253,7 @@ header {
                 }
             }
         }
-        #global-nav {
+        #globalNav {
             background: #000000;
             color: #ffffff;
             position: fixed;
@@ -354,11 +320,11 @@ header {
         }
         .open {
             overflow: hidden;
-            #global-nav {
+            #globalNav {
                 visibility: visible;
                 opacity: 1;
             }
-            #global-nav li {
+            #globalNav li {
                 opacity: 1;
                 transform: translateX(0);
                 transition: transform 1s ease, opacity .9s ease;
