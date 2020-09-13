@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %} 
+<div class="right-over-button">
+    <a class="create-new-button" href="{% url 'academic:DeadlineCreate' %}">Create New</a>
+</div>
+{% if deadlines %}
+<div class="contents">
+    {% for deadline in deadlines %}
+    <div class="content">
+        <div class="deadlineDate">
+            <h6>{{ deadline.date | date:"M d D"}}</h6>
+        </div>
+        <div class="deadlineTitle">
+            <h6>{{ deadline.title }}</h6>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h3 class="nothing">No Deadline</h3>
+{% endif %} {% endblock content %}

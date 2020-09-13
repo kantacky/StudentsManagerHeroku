@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<div class="right-over-button">
+    <a class="create-new-button" href="{% url 'notification:create' %}">Create New</a>
+</div>
+{% if notifications %}
+<div class="contents">
+    {% for notification in notifications %}
+    <a href="{% url 'notification:detail' notification.id %}">
+        <h6 class="content">{{ notification.title }}</h6>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<h3 class="nothing">No Notification</h3>
+{% endif %} {% endblock %}

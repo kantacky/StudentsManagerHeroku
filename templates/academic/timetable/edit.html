@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="right-over-button">
+    <a class="back-to-index-button" href="{% url 'academic:TimetableIndex' %}">Back to Index</a>
+</div>
+<div class="timetable-container">
+    <form action="{% url 'academic:TimetableEdit' timetable.id %}" method="post">{% csrf_token %} {{ form | crispy }}
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}

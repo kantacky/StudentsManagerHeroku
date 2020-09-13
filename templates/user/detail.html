@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<div class="user-detail">
+    <h5 class="hello-user">Hello, {{ user.first_name }} {{ user.last_name }}</h4>
+    <h5 class="username">User Name: {{ user.username }}</h4>
+    {% if user.is_staff %}
+    <a class="decorated" href="/admin/">
+        <h5>Staff Page</h5>
+    </a>
+    {% else %}
+    <a class="decorated" href="{% url 'user:editpasswd' %}">
+        <h5>パスワードを変更する</h5>
+    </a>
+    {% endif %}
+</div> {% endblock %}

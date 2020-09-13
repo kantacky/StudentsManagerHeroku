@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.noteTitle,
+.noteDate {
+    margin: 8px 0px;
+}
+
+.noteContainer {
+    margin: 32px 0px;
+    textarea {
+        height: 640px;
+    }
+}
+
+.note-delete-form {
+    text-align: center;
+}

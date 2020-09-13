@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<form action="" method="POST">
+    {{ form.non_field_errors }} {% for field in form %}
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label> {{ field }} {{ field.errors }} {% endfor %} {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+</form>
+{% endblock %}

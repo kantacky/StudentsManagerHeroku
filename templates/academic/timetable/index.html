@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="right-over-button">
+    <a class="create-new-button" href="{% url 'academic:TimetableCreate' %}">Create New</a>
+</div>
+{% if timetables %}
+<div class="contents">
+    {% for timetable in timetables %}
+    <a href="{% url 'academic:TimetableEdit' timetable.id %}">
+        <div class="content">
+            <h4 class="timetableDate">{{ timetable.date | date:"M d D" }}</h4>
+            {% if timetable.first != NULL %}
+            <p class="timetableClass">1h...{{ timetable.first }}</p>{% endif %} {% if timetable.second != NULL %}
+            <p class="timetableClass">2h...{{ timetable.second }}</p>{% endif %} {% if timetable.third != NULL %}
+            <p class="timetableClass">3h...{{ timetable.third }}</p>{% endif %} {% if timetable.fourth != NULL %}
+            <p class="timetableClass">4h...{{ timetable.fourth }}</p>{% endif %} {% if timetable.fifth != NULL %}
+            <p class="timetableClass">5h...{{ timetable.fifth }}</p>{% endif %} {% if timetable.sixth != NULL %}
+            <p class="timetableClass">6h...{{ timetable.sixth }}</p>{% endif %} {% if timetable.seventh != NULL %}
+            <p class="timetableClass">7h...{{ timetable.seventh }}</p>{% endif %}
+            <div class="timetableRemarks">{{ timetable.remarks | linebreaks }}</div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<h3 class="nothing">No Timetable</h3>
+{% endif %} {% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %} {% if exams %}
+<div class="contents">
+    {% for exam in exams %}
+    <div class="examInfo">
+        <h4>{{ exam.title }}</h4>
+        <h6>{{ exam.start_date | date:"M d D" }} - {{ exam.end_date | date:"M d D" }}</h6>
+    </div>
+    {% if coverages %}
+    <div class="contents">
+        {% for coverage in coverages %}
+        <div class="content">
+            <h4>{{ coverage.subject }}</h4>
+            <p>{{ coverage.coverage | safe | linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% else %}
+<h3 class="nothing">No Exam</h3>
+{% endif %} {% endblock %}

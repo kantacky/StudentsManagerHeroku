@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.topContent {
+    margin-top: 24px;
+    .topTitle {
+        margin-bottom: 8px;
+        padding: 12px 8px;
+        border-bottom: solid 1px #000000;
+    }
+    .subTitle {
+        margin: 12px;
+    }
+    .topIndex {
+        padding: 12px;
+    }
+    #emergency {
+        margin: 16px 32px;
+    }
+}
+
+.Special {
+    width: calc((100% - 88px) / 4);
+    margin: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 1px #000000;
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.2s;
+    p {
+        margin: 8px 0px;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+#letsLogin {
+    width: 100%;
+    margin: 128px 0px;
+    text-align: center;
+}
+
+#messages {
+    margin: 16px 0px -12px 0px;
+    .message {
+        text-align: center;
+        p {
+            margin: 8px 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .Special {
+        width: calc(100% - 18px);
+        display: block;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .topContent .topTitle {
+        border-bottom: solid 1px #ffffff;
+    }
+    .Special {
+        border: solid 1px #ffffff;
+    }
+}

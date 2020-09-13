@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.timetableDate {
+    margin-bottom: 16px;
+}
+.timetableClass {
+    margin: 12px 0px;
+}
+.timetableRemarks {
+    margin: 12px 0px;
+    line-height: 24px;
+}
+
+.examInfo {
+    margin: 16px;
+    h4 {
+        margin: 8px 0px;
+    }
+}
+
+.deadlineDate {
+    width: 120px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.deadlineTitle {
+    width: calc(100% - 24px - 120px);
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}

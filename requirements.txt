@@ -1,0 +1,6 @@
+django
+django-pwa
+gunicorn
+dj-database-url
+django-heroku
+whitenoise
