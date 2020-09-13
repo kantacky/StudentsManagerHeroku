@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block title %}Login{% endblock %} {% block content %}
-<h1>Login</h1><br>
-<section class="common-form">
+<h4 id="title">SignIn</h4>
+<section class="common-form" id="loginForm">
     {% if form.errors %}
     <p class="error-msg">Your username and password didn't match. Please try again.</p>
     {% endif %} {% if next %} {% if user.is_authenticated %}

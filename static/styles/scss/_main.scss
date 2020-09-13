@@ -65,47 +65,46 @@ a.decorated {
     border-bottom: dotted 1px #4169e1;
 }
 
-form {
-    margin: 16px 0px;
-    text-align: center;
-    div {
-        text-align: left;
-        input,
-        textarea {
-            width: calc(100% - 32px);
-            margin: 16px 0px;
-            padding: 16px;
-            background-color: #f5f5f5;
-            font-size: 18px;
-        }
-        textarea {
-            resize: vertical;
-        }
-        select {
-            width: 100%;
-            margin: 16px 0px;
-            padding: 8px;
-            background-color: #f5f5f5;
-            font-size: 18px;
-        }
+section#loginForm {
+    ul {
+        list-style: none;
     }
-    button {
-        width: 300px;
-        margin: 32px auto;
-        padding: 16px 0px;
-        background-color: #000000;
-        border: solid 2px #000000;
-        border-radius: 72px;
-        color: #ffffff;
-        font-size: 18px;
-        transition: 0.2s;
-        &:hover {
-            cursor: pointer;
-            background-color: #ffffff;
-            color: #000000;
+    form {
+        margin: 16px 0px;
+        text-align: center;
+        label {
+            width: 100%;
+            margin: 16px;
+            margin-right: -8px;
+            text-align: left;
+        }
+        input {
+            width: 200px;
+            margin: 16px;
+            padding: 8px;
+            background-color: transparent;
+            border-bottom: solid 1px #000000;
+            font-size: 18px;
+        }
+        button {
+            width: 200px;
+            margin: 32px 16px;
+            padding: 12px 0px;
+            background-color: #000000;
+            border: solid 2px #000000;
+            border-radius: 72px;
+            color: #ffffff;
+            font-size: 18px;
+            transition: 0.2s;
+            &:hover {
+                cursor: pointer;
+                background-color: #ffffff;
+                color: #000000;
+            }
         }
     }
 }
+
 
 #title {
     margin: 4px 0px;
@@ -202,17 +201,9 @@ button {
     #title {
         border-bottom: solid 1px #ffffff;
     }
-    form {
-        div {
-            input,
-            textarea {
-                background-color: #333333;
-                color: #ffffff;
-            }
-            select {
-                background-color: #333333;
-                color: #ffffff;
-            }
+    section#loginForm form {
+        input {
+            border-bottom: solid 1px #ffffff;
         }
         button {
             background-color: #000000;
