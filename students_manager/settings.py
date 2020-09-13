@@ -164,6 +164,11 @@ PWA_APP_ICONS = [
         'sizes': '512x512'
     }
 ]
+PWA_APP_SPLASH_SCREEN = [
+    {
+        'src': '/static/images/splash.png'
+    }
+]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 
