@@ -72,19 +72,22 @@ section#loginForm {
     form {
         margin: 16px 0px;
         text-align: center;
-        label {
-            width: 100%;
-            margin: 16px;
-            margin-right: -8px;
-            text-align: left;
-        }
-        input {
-            width: 200px;
-            margin: 16px;
-            padding: 8px;
-            background-color: transparent;
-            border-bottom: solid 1px #000000;
-            font-size: 18px;
+        .formLine {
+            display: block;
+            label {
+                width: 100%;
+                margin: 16px;
+                margin-right: -8px;
+                text-align: left;
+            }
+            input {
+                width: 200px;
+                margin: 16px;
+                padding: 8px;
+                background-color: transparent;
+                border-bottom: solid 1px #000000;
+                font-size: 18px;
+            }
         }
         button {
             width: 200px;
@@ -114,7 +117,7 @@ section#loginForm {
 }
 
 .contents {
-    padding: 16px 0px;
+    padding: 8px 0px;
     .content {
         padding: 16px;
     }
@@ -134,14 +137,15 @@ button {
     text-align: center;
 }
 
-.right-over-button {
+.RightOverButton {
+    width: 100%;
     margin: 32px 0px 16px 0px;
     display: block;
     text-align: right;
     a {
-        margin: 8px 16px;
+        margin: 0px 16px;
         padding: 8px 32px;
-        border-radius: 72px;
+        border-radius: 32px;
         background-color: #000000;
         border: solid 1px #000000;
         color: #ffffff;
@@ -155,19 +159,29 @@ button {
     }
 }
 
-.delete-button {
-    margin: 8px 16px;
-    padding: 8px 32px;
-    border-radius: 72px;
-    background-color: #000000;
-    border: solid 1px #000000;
-    color: #ffffff;
-    font-size: 18px;
-    transition: 0.2s;
-    &:hover {
-        cursor: pointer;
-        background-color: #ffffff;
-        color: #000000;
+#infoContainer {
+    margin: 32px 0px;
+    #infoTitle {
+        margin: 0;
+        padding: 16px;
+    }
+    #infoDateTime {
+        display: block;
+        padding: 12px;
+        p {
+            display: inline-block;
+            margin: 8px;
+        }
+    }
+    #infoText {
+        display: block;
+        margin: 16px;
+        line-height: 32px;
+        font-size: 14px;
+        word-break: break-all;
+        strong {
+            font-weight: 600;
+        }
     }
 }
 
@@ -202,7 +216,7 @@ button {
         border-bottom: solid 1px #ffffff;
     }
     section#loginForm form {
-        input {
+        .formLine input {
             border-bottom: solid 1px #ffffff;
         }
         button {
@@ -220,7 +234,7 @@ button {
     #band {
         border-bottom: solid 1px #ffffff;
     }
-    .right-over-button {
+    .RightOverButton {
         a {
             background-color: #000000;
             border: solid 1px #ffffff;

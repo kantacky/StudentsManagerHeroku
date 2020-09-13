@@ -5,7 +5,6 @@ from django.shortcuts import render
 from .models import *
 from django.contrib.auth.decorators import login_required
 from academic.models import *
-from notification.models import *
 
 @login_required
 def top(request):
@@ -14,8 +13,16 @@ def top(request):
         'specials': Special.objects.order_by('-date').all(),
         'timetables': Timetable.objects.order_by('date').all()[0:1],
         'deadlines': Deadline.objects.order_by('date').all(),
-        'notifications': Notification.objects.order_by('-posted_datetime').all()[0:5],
         'title': '',
     }
 
-    return render(request, 'main/top/index.html', context)
+    return render(request, 'main/top.html', context)
+
+@login_required
+def infoDetail(request, notification_id):
+    context = {
+        'info': get_object_or_404(Info, id = info_id),
+        'title': 'Info Detail',
+    }
+    
+    return render(request, 'main/info.html', context)

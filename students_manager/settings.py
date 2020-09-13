@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'academic',
     'main',
-    'notification',
     'user',
     'pwa',
     'django.contrib.sitemaps',
@@ -112,18 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-WEBPUSH_SETTINGS = {}
-
-CHANNELS = {
-    "CHANNELS": {
-        "slack": {
-            "_backend": "channels.backends.slack.SlackChannel",
-            "url": "https://hooks.slack.com/services/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"
-        }
-    }
-}
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

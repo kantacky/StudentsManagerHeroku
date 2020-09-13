@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<div id="infoContainer">
+    <h4 id="infoTitle">{{ info.title }}</h4>
+    <div id="infoDateTime">
+        <p><small>{{ info.posted_datetime | date:"M d, Y H:i }}</small></p>
+    </div>
+    <div id="infoText">
+        {{ info.text | safe | linebreaksbr }}
+    </div>
+</div>
+{% endblock %}

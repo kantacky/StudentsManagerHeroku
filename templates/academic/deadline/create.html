@@ -1,9 +1,17 @@
-{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
-<div class="right-over-button">
-    <a class="back-to-index-button" href="{% url 'academic:DeadlineIndex' %}">Back to Index</a>
+{% extends 'base.html' %} {% block content %}
+<div class="RightOverButton">
+    <a href="{% url 'academic:DeadlineIndex' %}">Back to Index</a>
 </div>
-<form class="new-deadline" method="post" action="{% url 'academic:DeadlineCreate' %}">
-    {% csrf_token %} {{ form | crispy }}
-    <button class="btn btn-primary" type="submit">Save</button>
-</form>
+<section id="academicForm">
+    <form method="post" action="{% url 'academic:DeadlineCreate' %}">
+        {% csrf_token %}
+        <div class="formLine" id="date">
+            {{ form.date }}
+        </div>
+        <div class="formLine">
+            {{ form.title }}
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</section>
 {% endblock %}

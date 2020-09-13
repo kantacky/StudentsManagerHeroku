@@ -1,4 +1,58 @@
 @charset "UTF-8";
+
+section#academicForm form {
+    width: 100%;
+    margin: 16px 0px;
+    text-align: center;
+    .formLine {
+        width: 300px;
+        margin: 32px auto;
+        display: block;
+        label {
+            width: 100px;
+            margin: 8px;
+        }
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            background-color: transparent;
+            border: solid 1px #000000;
+            text-align: center;
+            font-size: 18px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: solid 1px #000000;
+            font-size: 18px;
+        }
+        textarea {
+            width: calc(100% - 16px);
+            height: 300px;
+            padding: 8px;
+            font-size: 16px;
+            resize: none;
+            border: solid 1px #000000;
+        }
+    }
+    button {
+        width: 200px;
+        margin: 32px 16px;
+        padding: 12px 0px;
+        background-color: #000000;
+        border: solid 2px #000000;
+        border-radius: 72px;
+        color: #ffffff;
+        font-size: 18px;
+        transition: 0.2s;
+        &:hover {
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
+}
+
 .timetableDate {
     margin-bottom: 16px;
 }
@@ -29,4 +83,31 @@
     text-align: left;
     display: inline-block;
     vertical-align: middle;
+}
+
+@media (prefers-color-scheme: dark) {
+    section#academicForm form {
+        .formLine {
+            input {
+                border: solid 1px #ffffff;
+            }
+            select {
+                border: solid 1px #ffffff;
+            }
+            textarea {
+                border: solid 1px #ffffff;
+            }
+        }
+        button {
+            background-color: #000000;
+            border: solid 2px #ffffff;
+            color: #ffffff;
+            transition: 0.2s;
+            &:hover {
+                cursor: pointer;
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+    }
 }

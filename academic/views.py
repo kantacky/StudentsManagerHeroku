@@ -97,14 +97,14 @@ def TimetableEdit(request, timetable_id):
     return render(request, 'academic/timetable/edit.html', context)
 
 @login_required
-def ExamcoverageIndex(request):
+def ExamIndex(request):
     context = {
         'exams': Exam.objects.order_by('title').all(),
         'coverages': Coverage.objects.order_by('subject').all(),
-        'title': 'Exam Coverage',
+        'title': 'Exam',
     }
 
-    return render(request, 'academic/examcoverage/index.html', context)
+    return render(request, 'academic/exam.html', context)
 
 @login_required
 def DeadlineIndex(request):

@@ -24,3 +24,14 @@ class Special(models.Model):
 
     def __str__(self):
         return self.title
+
+class Info(models.Model):
+    title = models.CharField(max_length = 64)
+    text = models.TextField(blank = True)
+    posted_datetime = models.DateTimeField(default = datetime.datetime.now)
+
+    class Meta:
+        ordering = ['-posted_datetime']
+    
+    def __str__(self):
+        return self.title

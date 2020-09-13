@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %} 
-<div class="right-over-button">
-    <a class="create-new-button" href="{% url 'academic:DeadlineCreate' %}">Create New</a>
+<div class="RightOverButton">
+    <a href="{% url 'academic:DeadlineCreate' %}">Create New</a>
 </div>
 {% if deadlines %}
 <div class="contents">
