@@ -1,10 +1,38 @@
-{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
-<div class="right-over-button">
-    <a class="back-to-index-button" href="{% url 'academic:TimetableIndex' %}">Back to Index</a>
+{% extends 'base.html' %} {% block content %}
+<div class="RightOverButton">
+    <a href="{% url 'academic:TimetableIndex' %}">Back to Index</a>
 </div>
-<div class="timetable-container">
-    <form action="{% url 'academic:TimetableEdit' timetable.id %}" method="post">{% csrf_token %} {{ form | crispy }}
-        <button class="btn btn-primary" type="submit">Save</button>
+<section id="academicForm">
+    <form method="post" action="{% url 'academic:TimetableEdit' timetable.id %}">
+        {% csrf_token %}
+        <div class="formLine" id="date">
+            {{ form.date }}
+        </div>
+        <div class="formLine">
+            {{ form.first }}
+        </div>
+        <div class="formLine">
+            {{ form.second }}
+        </div>
+        <div class="formLine">
+            {{ form.third }}
+        </div>
+        <div class="formLine">
+            {{ form.fourth }}
+        </div>
+        <div class="formLine">
+            {{ form.fifth }}
+        </div>
+        <div class="formLine">
+            {{ form.sixth }}
+        </div>
+        <div class="formLine">
+            {{ form.seventh }}
+        </div>
+        <div class="formLine">
+            {{ form.remarks }}
+        </div>
+        <button type="submit">Save</button>
     </form>
-</div>
+</section>
 {% endblock %}
