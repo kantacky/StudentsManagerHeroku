@@ -11,6 +11,7 @@
     letter-spacing: 0.5px;
 }
 
+
 input[type="submit"],
 input[type="button"] {
   border-radius: 0;
@@ -19,13 +20,44 @@ input[type="button"] {
   appearance: button;
   border: none;
   box-sizing: border-box;
-    &::-webkit-search-decoration {
-      display: none;
-    }
-    &::focus {
-      outline-offset: -2px;
-    }
+  cursor: pointer;
 }
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button,
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label {
+    background: #ff0000;
+}
+
 
 main {
     width: 100%;
@@ -200,6 +232,13 @@ button {
     }
 }
 
+#userDetail {
+    margin: 8px;
+    h5 {
+        margin: 32px 0px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     body main #container {
         max-width: 1200px;
@@ -220,8 +259,6 @@ button {
     }
     a {
         color: #ffffff;
-        text-decoration: none;
-        border: none;
     }
     a.decorated {
         color: #87cefa;

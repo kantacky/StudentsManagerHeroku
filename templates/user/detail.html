@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-<div class="user-detail">
-    <h5 class="hello-user">Hello, {{ user.first_name }} {{ user.last_name }}</h4>
-    <h5 class="username">User Name: {{ user.username }}</h4>
+<div id="userDetail">
+    <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+    <h5>User Name: {{ user.username }}</h5>
     {% if user.is_staff %}
     <a class="decorated" href="/admin/">
-        <h5>Staff Page</h5>
+        <h5>Staff Only</h5>
     </a>
     {% else %}
     <a class="decorated" href="{% url 'user:editpasswd' %}">
