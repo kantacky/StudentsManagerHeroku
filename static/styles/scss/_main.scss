@@ -133,7 +133,7 @@ section#loginForm {
                 margin: 16px;
                 padding: 8px;
                 background-color: transparent;
-                border-bottom: solid 1px #000000;
+                border: solid 1px #000000;
                 font-size: 18px;
             }
         }
@@ -269,7 +269,7 @@ button {
     }
     section#loginForm form {
         .formLine input {
-            border-bottom: solid 1px #ffffff;
+            border: solid 1px #ffffff;
         }
         button {
             background-color: #000000;
